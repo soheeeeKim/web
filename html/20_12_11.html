@@ -6,13 +6,33 @@
     모든 a태그에 대해 글자색을 red로 바꾼다<br>
     <style>
         a {
+            color:black;
+        }
+        h1{
+            font-size:70px;
+            text-align:center;
+        }
+        .saw{
+            color:gray;
+        }
+        #active{
             color:red;
         }
     </style>
     <h1>2020/12/11</h1>
     <h2>CSS1</h2>
     <h3><a href="20_12_10.html" target="_blank"
-         title = "이전 실습">Prev practice</a></h3>
+         title = "이전 실습" class="saw">Prev practice</a></h3>
+    <h3><a href="20_11_23.html" target="_blank"
+        title = "이전 이전 실습" class="saw" id="active"> id는 중복되면 안된다</a></h3>
+    <h3><a href="20_11_23.html" target="_blank"
+        title = "이전 이전 실습">testPage</a></h3>
+    <p>
+        .클래스 선택자<br>
+        #id 선택자<br>
+        일반 태그 선택자<br>
+        font-size, text-align
+    </p>
 </head>
 <body>
     <ol>
