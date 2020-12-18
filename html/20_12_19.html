@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tit{
+            border-bottom : 5px solid red;
+            font-size : 45px;
+            text-align : center;
+            margin : 0px;
+            padding : 10px;
+            border-right-style:solid;
+        }
+        #grid{
+            border:5px solid pink;
+            display:grid;
+            grid-template-columns: 1fr 2fr;
+        }
+        #grid2{
+            display:grid;
+            grid-template-columns: 300px 1fr;
+        }
+        #grid2 ol{
+            border-right : 2px black solid;
+            padding : 20px;
+            margin : 10px;
+            
+        }
+        @media(max-width: 800px){
+            strong{
+                display:none;
+            }
+            #grid{
+                display:block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="tit">2020 / 12 / 19</h1>
+    <div id="grid">
+        <div style="border-right:yellow solid 5px; color:blue; 
+        text-align: center; padding:40px">
+            div 태그는 아무런 의미가 없는 태그이다</div>
+        <div>
+            <p>
+            기본적으로 block element이기 때문에 줄바꿈이 된다.<br>
+            grid-template-columns으로 열을 나눌수 있으며<br>
+            속성 값으로 fr을 주면 화면크기에 따라 자동적으로 비율이 나눠진다.<br>
+            display:grid로 미리 grid지정을 해야 한다. <br>
+            caniuse.com이란 사이트를 기억하자
+            </p>
+        </div>
+    </div>
+    
+    <span>inline element인 span 태그도 있다</span>
+    <br> id 선택자는 앞에 #을 붙인다. class선택자는 .을 붙인다.
+
+    <div id = "grid2">
+        <ol>
+            <li>TEST1</li>
+            <li>TEST2</li>
+            <li>TEST3</li>
+            <li>TEST4</li>
+            <li>grid2 밑의 ol태그 선택</li>
+            <li>#grid2 ol</li>
+        </ol>
+        <div style="padding:10px">
+            <h2>GRID</h2>
+            <p>
+                Hello Grid! 
+            </p>
+        </div>
+
+    </div>
+    <div>
+        <div style="font-size : 30px; color:violet; text-align: center; 
+        border:black 5px solid; margin:30px; display:block; width:300px">
+            반응형 디자인</div>
+        <p>
+            화면 창 크기에 따라 요쇼들의 배치가 바뀐다<br>
+            이러한 반응형 디자인을 미디어 쿼리로 구현한다
+        </p>
+        <strong style="font-size:50px; color:red">
+            화면이 800px이상이어야 보인다</strong>
+        <div style="font-size:20px">
+        외부에서 css파일 가져오기 : head에서 link태그 사용<br>
+        css파일 만들기 : head의 style태그 내용만 따로 빼서 만든다
+        </div>
+
+    </div>
+</body>
+</html>
