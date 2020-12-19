@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+    font-size:45px;
+    border-bottom:solid black 3px;
+    padding:10px;
+    margin:5px;
+    border-top: 2px black solid;
+}
+#first ul li{
+    font-size:20px;
+    color:blue;
+}
+#first,#second,#third{
+    display:grid;
+    grid-template-columns: 1fr 600px;
+    
+}
+#third ul li{
+    margin:10px;
+}
+
+#first ul, #third ul, #second #s,#fourth{
+    border-right : 2px black solid;
+    padding:10px;
+    margin:10px;
+}
+@media(min-width: 1350px){
+    #first,#second,#third,#fourth{
+    display:grid;
+    grid-template-columns: 750px 600px;
+    }
+}
+ol li{
+    font-size:20px;
+    color:midnightblue;
+    margin:10px;
+    
+}
+#third ul li{
+    font-size:20px;
+    
+}
+p{
+    font-size:20px;
+}

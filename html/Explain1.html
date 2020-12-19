@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Server</title>
+    <link rel="stylesheet" type ="text/css" href="web\html\explain1.css">]
+    <style>
+        h1{
+    text-align: center;
+    font-size:45px;
+    border-bottom:solid black 3px;
+    padding:10px;
+    margin:5px;
+    border-top: 2px black solid;
+}
+#first ul li{
+    font-size:20px;
+    color:blue;
+}
+#first,#second,#third,#fourth{
+    display:grid;
+    grid-template-columns: 1fr 600px;
+    
+}
+#third ul li, #fourth ol li{
+    margin:15px;
+}
+
+#first ul, #third ul, #second #s,#fourth ol{
+    border-right : 2px black solid;
+    padding:10px;
+    margin:10px;
+}
+@media(min-width: 1350px){
+    #first,#second,#third,#fourth{
+    display:grid;
+    grid-template-columns: 750px 600px;
+    }
+}
+ol li{
+    font-size:20px;
+    color:midnightblue;
+    margin:10px;
+    
+}
+#third ul li{
+    font-size:20px;
+    
+}
+p{
+    font-size:20px;
+}
+    </style>
+</head>
+<body>
+    <h1>Web Server</h1>
+    <div id="first">
+        <ul>
+            <li><strong>웹 서버란?</strong></li>
+            <p>
+                웹을 서비스 하는 컴퓨터이다.<br>
+                <u>PWS, IIS, 아파치</u> 같은 웹 서버 프로그램을 설치해야 한다.
+            </p>
+            <li><strong>웹 클라이언트란?</strong></li>
+            <p>
+                어떤 서비스를 요청하는 http를 사용하는 프로그램이다.<br>
+                보통 웹 페이지 요청은 웹 브라우저가 하므로, 웹 클라이언트를 <u>웹 브라우저</u>
+                라고도 한다.
+            </p>
+            <li><strong>서버 사이드란?</strong></li>
+            <p>
+                웹 서버측에서 하는 작업들이다.<br>
+                클라언트에서 넘어온 자료를 DB에 저장한다든지, 계산을 해 결과를 만든다든지 하는 것들이다.<br>
+                웹 프로그램이 담당하며, 그 종류는 <u>PHP, ASP, Perl, Python</u>등이 있다.
+            </p>
+            <li><strong>클라이언트 사이드란?</strong></li>
+            <p>
+                이것을 잘 활용하면 서버의 작업량을 줄일 수 있다.<br>
+                클라이언트 스스로 일을 처리할 수 있도록 하는 것이 클라이언트 사이드 언어이다.<br>
+                종류는 <u>Java Script</u>등이 있다. 
+            </p>
+        </ul>
+        <div>
+            <img src="C:\Bitnami\wampstack-7.4.12-0\apache2\htdocs\server.jpg" width=90%> <br>
+            <img src="C:\Bitnami\wampstack-7.4.12-0\apache2\htdocs\server2.png" width=90%>
+        </div>
+    </div>
+    <h1>
+        웹 서버 구축하기
+    </h1>
+    <div id="second">
+        <div id = "s">
+           <ol>
+            <li><strong>웹 호스팅</strong></li>
+            간단한 개인 홈페이지, 월 1만원 이하로 운용 가능
+            <li><strong>클라우딩</strong></li>
+            간단한 쇼핑몰, 월 10만원 이하로 운용 가능
+            <li><strong>서버 호스팅</strong></li>
+            중형 이상 홈페이지, 월 10만원~ 수백만원
+            </ol>
+        </div>
+        
+        <div>
+            <h2>웹 호스팅 -> Bitnami를 이용해 아파치 설치</h2>
+            <img src="C:\Bitnami\wampstack-7.4.12-0\apache2\htdocs\apache.jpg" width=90%>
+        </div>
+    </div>
+    <h1>도메인 네임과 IP</h1>
+    <div id="third">
+        <ul>
+            <li><strong>도메인 네임</strong>은 네트워크상, 컴퓨터를 식별하는 <u>고유 번호</u> (호스트명)</li>
+            <li>도메인 레지스트리에게서 등록된 이름</li>
+            <li>IP는 사람이 기억하기 어렵기 때문에 각 IP에 이름을 부여함</li>
+            <li><strong>localhost, 127.0.0.1</strong> 모두 내 컴퓨터를 가리킴</li>
+        </ul>
+        <img src="C:\Bitnami\wampstack-7.4.12-0\apache2\htdocs\server3.png" width=85% >
+    </div>
+    <h1>아파치 사용하기</h1>
+    <div id="fourth">
+        <ol>
+            <li>Bitnami폴더 아래의 <strong>htdocs</strong>폴더에 표시하고 싶은 html파일을 넣고</li>
+            <li><strong>Apache Web Server을 활성화</strong> 시키고</li>
+            <li><strong>"127.0.0.1/파일 명"</strong>, 또는 "컴퓨터 아이피 주소/파일 명"을 주소창에 입력하면 된다</li>
+        </ol>
+        <img src="C:\Bitnami\wampstack-7.4.12-0\apache2\htdocs\server4.png" width=85% >
+    </div>
+</body>
+</html>
