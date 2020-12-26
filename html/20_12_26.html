@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12/26</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #start{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows:1fr 1fr 1fr ;
+            border-right : gray solid 3px;
+            border-bottom: none;
+            padding:20px;
+            margin:0px;
+        }
+        input{
+            font-size : 25px;
+            font-weight: bold;
+            background-color : ivory;
+            outline-color: red;
+        }
+        #all{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 50vh;
+        }
+        #nums{
+            display:grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            padding-left:25px;
+        }
+        #nums strong{
+            font-size : 30px;
+            margin : 0px;
+        }
+        .result{
+            color:cornflowerblue;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+            border-bottom: darkgray 5px solid;
+            padding:15px;
+            margin:0px;
+        }
+        @media(max-width : 1000px){
+            #all{
+            display:grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 0.5fr;
+            }
+            #start{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows:1fr 1fr 1fr ;
+            border-bottom : gray solid 3px;
+            border-right:none;
+            padding:20px;
+            margin:0px;
+            }
+            #nums{
+            display:grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            padding-top:25px;
+            }
+        }
+    </style>
+    <script>
+        function setgugu(nums){
+            var p = document.querySelector('#nums');
+            var list = p.querySelectorAll('strong');
+            for(var i=0; i<list.length;i++){
+                var temp = ""+nums+" x "+(i+1)+" = "+
+                "<span class='result'>"+nums*(i+1)+"</span>"+"";
+                list[i].innerHTML = temp;
+            }
+        }
+        function changeColor(){
+            var Body = document.querySelector('body')
+            var temp = Body.style.backgroundColor;
+            if(temp==='white'){
+                Body.style.backgroundColor = 'black';
+                Body.style.color = 'white';
+                $('input').css('background-color','darkBlue');
+                $('input').css('color','white');
+            }
+            else{
+                Body.style.backgroundColor = 'white';
+                Body.style.color = 'black';
+                $('input').css('background-color','ivory');
+                $('input').css('color','black');
+            }  
+        }
+    </script>
+</head>
+<body>
+    <h1>구구단</h1>
+    
+    <div id = "all">
+        <div id = "start">
+            <input type="button" value = "2단" onclick="setgugu(2)">
+            <input type="button" value = "3단" onclick="setgugu(3)">
+            <input type="button" value = "4단" onclick="setgugu(4)">
+            <input type="button" value = "5단" onclick="setgugu(5)">
+            <input type="button" value = "6단" onclick="setgugu(6)">
+            <input type="button" value = "7단" onclick="setgugu(7)">
+            <input type="button" value = "8단" onclick="setgugu(8)">
+            <input type="button" value = "9단" onclick="setgugu(9)">
+            <input type="button" value = "C" onclick="changeColor()">
+        </div>
+        <div id = "nums">
+            <strong>2 x 1 =<span class="result"> 2</span> <br></strong>
+            <strong>2 x 2 = <span class="result"> 4</span><br></strong>
+            <strong>2 x 3 = <span class="result"> 6</span><br></strong>
+            <strong>2 x 4 = <span class="result"> 8</span><br></strong>
+            <strong>2 x 5 = <span class="result"> 10</span><br></strong>
+            <strong>2 x 6 = <span class="result"> 12</span><br></strong>
+            <strong>2 x 7 = <span class="result"> 14</span><br></strong>
+            <strong>2 x 8 = <span class="result"> 16</span><br></strong>
+            <strong>2 x 9 = <span class="result"> 18</span><br></strong>
+        </div>
+    </div>
+    
+</body>
+</html>
