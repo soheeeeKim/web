@@ -25,6 +25,7 @@
             display:grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 50vh;
+            border-bottom: gray solid 3px;
         }
         #nums{
             display:grid;
@@ -45,6 +46,22 @@
             padding:15px;
             margin:0px;
         }
+        #second .l{
+            font-size:50px;
+            color : darkcyan;
+            padding:15px;
+        }
+        div{
+            font-size:25px;
+        }
+        #picture1{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            padding:15px;
+        }
+        #third li{
+            padding:20px;
+        }
         @media(max-width : 1000px){
             #all{
             display:grid;
@@ -53,7 +70,7 @@
             }
             #start{
             display:grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 130px 130px 130px;
             grid-template-rows:1fr 1fr 1fr ;
             border-bottom : gray solid 3px;
             border-right:none;
@@ -71,26 +88,26 @@
         function setgugu(nums){
             var p = document.querySelector('#nums');
             var list = p.querySelectorAll('strong');
-            for(var i=0; i<list.length;i++){
-                var temp = ""+nums+" x "+(i+1)+" = "+
-                "<span class='result'>"+nums*(i+1)+"</span>"+"";
+            for (var i = 0; i < list.length; i++) {
+                var temp = "" + nums + " x " + (i + 1) + " = " +
+                    "<span class='result'>" + nums * (i + 1) + "</span>" + "";
                 list[i].innerHTML = temp;
             }
         }
         function changeColor(){
             var Body = document.querySelector('body')
             var temp = Body.style.backgroundColor;
-            if(temp==='white'){
+            if(temp =='black'){
+               Body.style.backgroundColor = 'white';
+                Body.style.color = 'black';
+                $('input').css('background-color','ivory');
+                $('input').css('color','black');
+            }
+            else{
                 Body.style.backgroundColor = 'black';
                 Body.style.color = 'white';
                 $('input').css('background-color','darkBlue');
                 $('input').css('color','white');
-            }
-            else{
-                Body.style.backgroundColor = 'white';
-                Body.style.color = 'black';
-                $('input').css('background-color','ivory');
-                $('input').css('color','black');
             }  
         }
     </script>
@@ -122,6 +139,34 @@
             <strong>2 x 9 = <span class="result"> 18</span><br></strong>
         </div>
     </div>
-    
+    <ul id = "second">
+        <li class="l">if/switch 문</li>
+           <div>
+               false = undefined, null, 0, NaN, ""(empty string)<br>
+               사용 가능 비교 연산자 : ===, !==, >, <, <=, >= <br>
+               <div id = "picture1">
+                    <img src="C:\Users\sohee\Pictures\pic1.png" width=95%>
+                    <img src="C:\Users\sohee\Pictures\pic2.png" width=95%>
+               </div>
+               ***삼항 연산자<br>
+               <img src="C:\Users\sohee\Pictures\pic3.png" width=50%>
+           </div>
+        <li class="l">태그 선택</li>
+            <div>
+                <ul id="third">
+                    <li>
+                        <strong>querySelector</strong> : 
+                        처음 출현하는 element 리턴 
+                    </li>
+                    <li>
+                    <strong>querySelectorAll</strong> : 
+                    해당 selector와 일치하는 모든 element 배열 리턴<br>
+                    -> for문을 사용해 모두 접근 가능<br>
+                    <img src="C:\Users\sohee\Pictures\pic4.png" width=90%>
+                    </li>
+                </ul>
+            </div>
+            
+    </ul>
 </body>
 </html>
