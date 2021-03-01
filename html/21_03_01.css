@@ -14,13 +14,13 @@
   }
   .navbar .logo{
     float: left;
-    position:relative; left:30px; height: 20px; top: 20px; display: inline-block;
+    position:relative; left:30px; height: 20px; top: 20px; display: block;
   }
   .navbar .menu{
     float: right; list-style: none; top:0; margin:0 0;
   }
   .navbar .menu li{
-    float:left; display:inline-block; margin-right: 30px; font-weight: bold;
+    float:left; display:block; margin-right: 30px; font-weight: bold;
     font-size: 13px; line-height: 60px; 
   }
   
