@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  .div1{
+    background-color: #353535;float: left;
+    height: 60px; width: 100%; color:white;
+  }
+  .div1 h1{
+    margin-left: 30px; display: inline; line-height: 60px; 
+  }
+  .div2{
+    height: 350px; background:url(../images/main_img.jpg); width: 100%;float: left;
+    background-size: cover; background-position: center center;
+  }
+  .div3{
+    height: 320px; width: 100%;float: left;line-height: 320px;
+  }
+  .div3 .text{
+    padding: 0 65px;  vertical-align: middle; line-height: normal;
+    display: inline-block;
+  }
+  .div3 .text p{
+    line-height: normal;
+  }
+  .div3 .text p:nth-child(2){
+    font-size:20px; font-weight: bold; margin-top: 10px; margin-bottom: 30px;
+  }
+  .div4{
+    height: 385px; background: url(../images/img1.jpg);width: 100%;float: left; background-size: cover; background-position: center center;
+  }
+  .div5{
+    height: 200px; background: url(../images/img2.jpg);width: 100%;float: left; background-size: cover; background-position: center center;
+    line-height: 200px;
+  }
+  .div5 h1{
+    display: inline-block; line-height: normal; border: 3px solid white; color:white;
+    padding:5px 40px; font-size: 16px; vertical-align: middle; margin:0 0;
+    position:relative; left:50%; transform: translateX(-50%);
+  }
+  .div6{
+    height: 200px; background: url(../images/img3.jpg);width: 100%;float: left; background-size: cover; background-position: center center;
+  }
+  @media(min-width:768px){
+    .div2{height:562px}
+    .div3{
+      height: 262px; line-height: 262px; 
+    }
+    .div4{
+      height: 360px; width: 50%;
+    }
+    .div5, .div6{
+      height: 180px; width: 50%; line-height: 180px; 
+    }
+  }
+  @media(min-width:992px){
+    .div2{
+      width: 50%; height: 700px;
+    }
+    .div3{
+      width: 50%; height: 350px; line-height: 350px; 
+    }
+    .div4{
+      width: 25%; height: 350px;
+    }
+    .div5, .div6{
+      width: 25%; height: 175px;line-height: 175px; 
+    }
+  }
